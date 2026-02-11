@@ -4,61 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="temp.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <div id="all">
-
-        
-        
-        <input type="number" id="num" placeholder="0">
     
-        
-        
-        <div id="units">
+   
+   
+    <div class="calculator">
+    
          
-            <div class="mid">
-            <label class="label">from : </label>
-            <select class="select" id="from"> from :
-                <option value="c">C°</option>
-                <option value="f">F°</option>
-                <option value="m">m</option>
-                <option value="ft">feet</option>
-                <option value="kg">kg</option>
-                <option value="lbs">lbs</option>
-                
 
-            </select> 
-            </div>   
+      <div class="left">
 
+        <div class="row"> 
+             <div id="display" style="color: coral;"> </div>
+             <button id="de" onclick="clearDisplay()">C</button>
+         </div>
+       
+       <div id="num"> 
+        <div class="row">
+         <button onclick="display('1')">1</button>
+         <button onclick="display('2')">2</button>
+         <button onclick="display('3')">3</button>
+         </div>
+       
+         
+         <div class="row">
+         <button onclick="display('4')">4</button>
+         <button onclick="display('5')">5</button>
+         <button onclick="display('6')">6</button>
+         </div>
         
-          <div class="mid" >
-
-             <label  class="label">to : </label> 
-
-           <select class="select" id="to"> to :
-                <option value="c">C°</option>
-                <option value="f" >F°</option>
-                <option value="m">m</option>
-                <option value="ft">feet</option>
-                <option value="kg">kg</option>
-                <option value="lbs">lbs</option>
-                
-
-            </select> </div>
-
-        </div>
-        <button id="btn"> convert </button>
-
-        <div id="result">0</div>
-
-
-
-
-
-
-    </div>
+         <div class="row">
+         <button onclick="display('7')">7</button>
+         <button onclick="display('8')">8</button>
+         <button onclick="display('9')">9</button>
+         </div>
+       </div>
+         
+        
+        
+         <div class="row">
+         <button id="zero" onclick="display('0')">0</button>
+          <button id="equal" onclick="calculate()">=</button>
+         </div>
     
-    <script src="temp.js"></script>
+       </div>
+
+      
+    
+     <div class="action">
+         <button onclick="display('+')" >+</button>
+         <button onclick="display('*')">*</button>
+         <button onclick="display('-')">-</button>
+         <button onclick="display('/')">/</button>
+         <button onclick="display('.')">.</button>
+     </div>
+
+   </div> 
+
+   <script src="script.js"></script>
 </body>
-</html>            
+</html>
